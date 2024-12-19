@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ENG2575 Group Project - Console Style</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #ffe7a5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .console-container {
+            position: absolute;
+            left: 400;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .console {
+            width: 400px;
+            height: 300px;
+            background-color: #424242;
+            border-radius: 20px;
+            position: relative;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+
+        .screen {
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .controller {
+            position: absolute;
+            width: 300px;
+            padding: 20px;
+            background-color: #c3ecf6;
+            border-radius: 15px;
+            border: 3px solid #333;
+            transition: transform 0.3s;
+        }
+
+        .controller:hover {
+            transform: scale(1.05);
+            z-index: 100;
+        }
+
+        .controller h3 {
+            margin-top: 0;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Controller positions */
+        .intro {
+            left: 50px;
+            top: 100px;
+        }
+
+        .history {
+            left: 50px;
+            bottom: 100px;
+        }
+
+        .problems {
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .conclusion {
+            right: 50px;
+            top: 100px;
+        }
+
+        .references {
+            right: 50px;
+            bottom: 100px;
+        }
+
+        /* Controller cords */
+        .controller::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: #333;
+            z-index: -1;
+        }
+
+        .intro::after {
+            right: -50px;
+            top: 50%;
+            transform: rotate(0deg);
+        }
+
+        .history::after {
+            right: -50px;
+            top: 50%;
+            transform: rotate(0deg);
+        }
+
+        .problems::after {
+            left: 50%;
+            top: -20px;
+            transform: translateX(-50%) rotate(90deg);
+        }
+
+        .conclusion::after {
+            left: -50px;
+            top: 50%;
+            transform: rotate(0deg);
+        }
+
+        .references::after {
+            left: -50px;
+            top: 50%;
+            transform: rotate(0deg);
+        }
+
+        .list-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .controller p {
+            font-size: 0.9em;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="console-container">
+        <div class="console">
+            <div class="screen">
+                <h1>Virtually Good or Bad?<br>The Effects of Video Games on Children</h1>
+            </div>
+        </div>
+        
+        <div class="controller intro">
+            <h3>Introduction</h3>
+            <p>Video games are a popular form of entertainment for young people worldwide, 
+            known for their immersive visuals, engaging narratives, and dynamic gameplay. 
+            However, they remain a topic of debate, with some arguing that they promote valuable skills such as problem-solving and teamwork,
+            while others raise concerns about their potential to foster hostility, addiction, and poor academic performance.</p>
+        </div>
+
+        <div class="controller history">
+            <h3>History</h3>
+            <p>Video games originated in the 1950s and 1960s with simple creations like Tennis for Two and Spacewar! 
+            and gained widespread recognition with the release of Pong in 1972. The 1980s saw the rise of home consoles,
+            which brought gaming into households worldwide.</p>
+        </div>
+
+        <div class="controller problems">
+            <h3>Problems + Solutions</h3>
+            <div class="list-container">
+                <ol type="i">
+                    <li><b>COGNITIVE:</b> Videogames impair focus</li>
+                    <li><b>EMOTIONAL:</b> Can lead to mental health issues</li>
+                    <li><b>SOCIAL:</b> May increase aggressive thoughts</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="controller conclusion">
+            <h3>Conclusion</h3>
+            <p>Video games have the potential to enhance valuable skills but can also lead to focus issues, 
+            emotional challenges, and aggression when overindulged. Maintaining balanced habits can help mitigate these negative effects.</p>
+        </div>
+
+        <div class="controller references">
+            <h3>References</h3>
+            <p>[Your references will go here]</p>
+        </div>
+    </div>
+</body>
+</html>
